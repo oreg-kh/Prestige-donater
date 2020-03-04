@@ -1,5 +1,6 @@
 javascript:
 var percent = 100;
+var block = 300;
 let gear = "https://raw.githubusercontent.com/oreg-kh/Unit-and-building-simulator/master/gear.png";
 let token = atob("ZjRiNDIzZWE4MzgxMDJmZmNkMTdmY2M4MDdmY2Y1MTkxZjlkN2I5Yw==");
 var player = game_data.player.name;
@@ -18,7 +19,7 @@ let issue = {
 
 function prestige() {
     if (document.URL.match("screen=ally&mode=level")) {
-        let xp = Number($(".balance").text()) * percent / 100;
+        let xp = Number(($(".balance").text()) - block) * percent / 100;
         let village_id = game_data.village.id;
 
         $(".donate_button").click();
